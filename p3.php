@@ -15,4 +15,3 @@ function simpleInterest($p, $r, $t)
 }
 echo simpleInterest(5000, 2, 5);
 
-?>

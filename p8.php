@@ -23,4 +23,3 @@ foreach($colors as $value){
 
 
 
-?>

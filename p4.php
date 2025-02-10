@@ -16,4 +16,3 @@ class Details{
 $person1=new Details("Niraj",18);
 echo $person1->message();
 
-?>

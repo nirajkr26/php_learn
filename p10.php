@@ -15,4 +15,3 @@ echo "Name is $f having age $g";
 
 
 
-?>

@@ -83,3 +83,4 @@ array(
 foreach($books as $key=>$value){
     echo "the book $key is ".$value["name"]." and the copies are ".$value["copies"]."\n";
 }
+?>

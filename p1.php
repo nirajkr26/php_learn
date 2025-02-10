@@ -10,4 +10,3 @@ $t=5;
 $r=9;
 echo "<br> simple interest is " .($p*$t*$r)/100; //simple interest formula
 
-?>

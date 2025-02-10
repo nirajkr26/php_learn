@@ -13,4 +13,3 @@ switch($num/100){
     default:
     echo "not matches";
 }
-?>

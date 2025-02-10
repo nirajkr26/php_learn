@@ -9,4 +9,3 @@ fclose($file);
 $abc=array("modi","yogi");
 print_r($abc);
 
-?>

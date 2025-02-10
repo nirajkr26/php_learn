@@ -12,4 +12,3 @@ var_dump(y);
 var_dump(b);
 print(course[1]."\n");
 print(course[0]);
-?>
