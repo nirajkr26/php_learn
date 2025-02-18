@@ -1,3 +1,18 @@
+<?php
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        if(!empty($_POST['sport'])){
+            $sports = $_POST['sport'];
+            echo "You like: <br>";
+            echo "<ol>";
+            foreach ($_POST['sport'] as $sports) {
+                echo "<li>". htmlspecialchars(($sports)) . "</li>";
+            }
+            echo "</ol>";
+        } else {
+            echo "Please select a sport";
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
