@@ -12,17 +12,15 @@ session_start();
 </head>
 <body>
     <?php
-     $_SESSION["favcolor"]="green";
-     $_SESSION["favanimal"]="cat";
-     $_SESSION["nickname"]="krishna";
-     $_SESSION["branch"]="CSE";
-     echo "Session variables are set!<br>";
-     echo "Fav color: ".$_SESSION["favcolor"]."<br>";
-    ?>
-    <?php
     echo "<pre>";
     print_r($_SESSION);
     echo "</pre>";
+    echo "Fav color: ".$_SESSION["favcolor"]."<br>";    
+    echo "Fav animal: ".$_SESSION["favanimal"]."<br>";
+    echo "Nickname: ".$_SESSION["nickname"]."<br>";
+    echo "Branch: ".$_SESSION["branch"]."<br>";
     ?>
+    
+    
 </body>
 </html>
