@@ -44,6 +44,11 @@ if(isset($_COOKIE["user"]) && isset($_COOKIE["email"])){
 }else{
     echo "Cookie not set!";
 }
+echo "<pre>";
+print_r($_COOKIE);
+echo "</pre>";
+
+setcookie("Student","LPU",time()+300,"/","",true,true);
 
 
 ?>
