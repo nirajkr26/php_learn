@@ -1,6 +1,6 @@
 <?php
-$name = $email = $gender = $website = "";
-$nameErr = $emailErr = $genderErr = $websiteErr ="";
+$name = $email = $gender = $website = $phone = "";
+$nameErr = $emailErr = $genderErr = $websiteErr = $passwordErr = $phoneErr = $termsErr = "";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (empty($_POST['name'])) {
@@ -25,6 +25,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $passwordErr = "Password must be at least 8 characters long";
     } else {
         $password = test_input($_POST['password']);
+    }
+
+    if (empty($_POST['phone'])) {
+        $phoneErr = "Phone number is required";
+    } else {
+        $phone = test_input($_POST['phone']);
+        if (!preg_match("/^[0-9]{10}$/", $phone)) {
+            $phoneErr = "Invalid phone number format";
+        }
+    }
+
+    if (empty($_POST['terms'])) {
+        $termsErr = "You must accept the terms and conditions";
     }
 }
 
@@ -52,6 +65,15 @@ function test_input($data) {
         
         Password: <input type="password" name="password" value="<?php echo $password; ?>" >
         <span style="color: red;">* <?php echo $passwordErr; ?></span>
+        <br><br>
+
+        Phone: <input type="text" name="phone" value="<?php echo $phone; ?>">
+        <span style="color: red;">* <?php echo $phoneErr; ?></span>
+        <br><br>
+
+        <input type="checkbox" name="terms" value="accepted" <?php if (isset($_POST['terms'])) echo "checked"; ?>>
+        I accept the terms and conditions
+        <span style="color: red;">* <?php echo $termsErr; ?></span>
         <br><br>
         
         <input type="submit" name="submit" value="Submit">

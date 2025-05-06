@@ -1,5 +1,5 @@
 <?php
-$directory="D:\javascript huxn"; //Specify the directory
+$directory="D:\javascript huxn";
 if(!is_dir($directory)){
     mkdir($directory,0777,true);
 

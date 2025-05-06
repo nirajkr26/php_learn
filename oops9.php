@@ -22,7 +22,7 @@ class Dog implements Animal, Pet
 }
 
 $dog = new Dog();
-$cat = new Cat();
+// $cat = new Cat();
 echo $dog->makeSound(); // Outputs: Bark!
 echo "<br>";
 echo $dog->play(); // Outputs: Dog is Playing
